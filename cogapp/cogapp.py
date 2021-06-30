@@ -138,9 +138,9 @@ class CogGenerator(Redirectable):
         # (end-of-line comment chars, for example),
         # then remove it from all the lines.
         prefIn = commonPrefix(self.markers + self.lines)
-        if prefIn:
-            self.markers = [ l.replace(prefIn, '', 1) for l in self.markers ]
-            self.lines = [ l.replace(prefIn, '', 1) for l in self.lines ]
+#         if prefIn:
+#             self.markers = [ l.replace(prefIn, '', 1) for l in self.markers ]
+#             self.lines = [ l.replace(prefIn, '', 1) for l in self.lines ]
 
         return reindentBlock(self.lines, '')
 
