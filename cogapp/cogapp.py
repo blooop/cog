@@ -137,12 +137,13 @@ class CogGenerator(Redirectable):
         # If the markers and lines all have the same prefix
         # (end-of-line comment chars, for example),
         # then remove it from all the lines.
-        prefIn = commonPrefix(self.markers + self.lines)
+#        prefIn = commonPrefix(self.markers + self.lines)
 #         if prefIn:
 #             self.markers = [ l.replace(prefIn, '', 1) for l in self.markers ]
 #             self.lines = [ l.replace(prefIn, '', 1) for l in self.lines ]
 
-        return reindentBlock(self.lines, '')
+#        return reindentBlock(self.lines, '')
+        return self.lines
 
     def evaluate(self, cog, globals, fname):
         # figure out the right whitespace prefix for the output
