@@ -143,7 +143,7 @@ class CogGenerator(Redirectable):
 #             self.lines = [ l.replace(prefIn, '', 1) for l in self.lines ]
 
 #        return reindentBlock(self.lines, '')
-        return self.lines
+        return '\n'.join(self.lines)
 
     def evaluate(self, cog, globals, fname):
         # figure out the right whitespace prefix for the output
